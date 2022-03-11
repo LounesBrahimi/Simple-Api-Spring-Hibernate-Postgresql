@@ -16,4 +16,9 @@ public class UserService {
     public List<User> getUsers() {
         return userDAO.findAll();
     }
+    
+    public User saveUser(User user) {
+        User savedUser = userDAO.save(user);
+        return savedUser;
+    }
 }
